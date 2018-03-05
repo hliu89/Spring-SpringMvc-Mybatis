@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd" >
+        
+
+<bean id="department" class="Collection.Department">
+ <property name="name" value="财务部门"/>
+ <property name="empname">
+  <list>
+   <value>xiaoming</value>
+   <value>daming</value>
+   <value>dadaming</value>
+  </list>
+ </property>
+ <property name="emplist">
+ <list>
+  <ref bean="employee1"/>
+  <ref bean="employee2"/>
+  </list>
+ </property>
+</bean>
+<bean id="employee1" class="Collection.Employee">
+ <property name="name">
+  <value>beijing</value>
+ </property>
+</bean>
+<bean id="employee2" class="Collection.Employee">
+ <property name="name">
+  <value>tianjin</value>
+ </property>
+</bean>
+ </beans>
